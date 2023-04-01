@@ -1,0 +1,188 @@
+<Ui xmlns="http://www.runewaker.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../../worldxml/ui.xsd">
+	<Frame name="MoveFramesTemplate" enableMouse="true" inherits="UIPanelAnchorFrameTemplate" virtual="true">
+		<Scripts>
+			<OnShow>
+				UIPanelAnchorFrame_OnShow( this:GetParent() )
+			</OnShow>
+			<OnMouseDown>
+				UIPanelAnchorFrame_OnMouseDown( this:GetParent(), key )
+			</OnMouseDown>
+			<OnMouseUp>
+				UIPanelAnchorFrame_OnMouseUp( this:GetParent(), key )
+			</OnMouseUp>
+		</Scripts>
+	</Frame>
+	<Frame parent="PlayerFrame" inherits="MoveFramesTemplate">
+		<Size><AbsDimension x="155" y="16"/></Size>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset>
+					<AbsDimension x="115" y="4"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+	</Frame>
+	<Frame parent="PetHeadFrame" inherits="MoveFramesTemplate">
+		<Size><AbsDimension x="88" y="16"/></Size>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset>
+					<AbsDimension x="0" y="12"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+	</Frame>
+	<Frame parent="TargetFrame" inherits="MoveFramesTemplate">
+		<Size><AbsDimension x="115" y="16"/></Size>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset>
+					<AbsDimension x="5" y="20"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+	</Frame>
+	<Frame parent="TargetTargetFrame" inherits="MoveFramesTemplate">
+		<Size><AbsDimension x="88" y="16"/></Size>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset>
+					<AbsDimension x="64" y="16"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+	</Frame>
+	<Frame parent="PlayerBuffButton1" inherits="MoveFramesTemplate">
+		<Size><AbsDimension x="16" y="16"/></Size>
+		<Layers>
+			 <Layer>
+				<Texture file="Interface\WorldMap\WorldMap-TitlebarSwitch-Normal">
+					<Size><AbsDimension x="16" y="16"/></Size>
+					<Color a=".1"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset>
+					<AbsDimension x="-10" y="-10"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+	</Frame>
+	<Frame parent="PlayerDebuffButton1" inherits="MoveFramesTemplate">
+		<Size><AbsDimension x="16" y="16"/></Size>
+		<Layers>
+			 <Layer>
+				<Texture file="Interface\WorldMap\WorldMap-TitlebarSwitch-Normal">
+					<Size><AbsDimension x="16" y="16"/></Size>
+					<Color a=".1"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset>
+					<AbsDimension x="-10" y="-10"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+	</Frame>
+	<Frame parent="CastingBarFrame" inherits="MoveFramesTemplate">
+		<Anchors>
+			<Anchor point="TOPLEFT"/>
+			<Anchor point="BOTTOMRIGHT"/>
+		</Anchors>
+	</Frame>
+	<Frame parent="TargetCastingBar" inherits="MoveFramesTemplate">
+		<Anchors>
+			<Anchor point="TOPLEFT"/>
+			<Anchor point="BOTTOMRIGHT"/>
+		</Anchors>
+	</Frame>
+	<Frame parent="ExperienceFrame" inherits="MoveFramesTemplate">
+		<Size><AbsDimension x="128" y="13"/></Size>
+		<Anchors>
+			<Anchor point="LEFT"/>
+		</Anchors>
+	</Frame>
+	<Frame parent="UnitFrame_party1" inherits="MoveFramesTemplate">
+		<Size><AbsDimension x="88" y="16"/></Size>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset>
+					<AbsDimension x="64" y="12"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+	</Frame>
+	<Frame parent="HouseFrame" inherits="MoveFramesTemplate">
+		<Size><AbsDimension x="204" y="27"/></Size>
+		<Anchors>
+			<Anchor point="TOPLEFT"/>
+		</Anchors>
+	</Frame>
+	<Frame parent="GuildHouseFrame" inherits="MoveFramesTemplate">
+		<Size><AbsDimension x="204" y="27"/></Size>
+		<Anchors>
+			<Anchor point="TOPLEFT"/>
+		</Anchors>
+	</Frame>
+	<Frame parent="MinimapFrame" inherits="MoveFramesTemplate">
+		<Size><AbsDimension x="16" y="16"/></Size>
+		<Anchors>
+			<Anchor point="TOP"/>
+		</Anchors>
+	</Frame>
+	<Frame parent="MinimapFrameBorder" inherits="MoveFramesTemplate">
+		<Size><AbsDimension x="136" y="25"/></Size>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset>
+					<AbsDimension x="90" y="2"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+	</Frame>
+	<Frame parent="MinimapFrameTime" inherits="MoveFramesTemplate">
+		<Size><AbsDimension x="16" y="16"/></Size>
+		<Layers>
+			 <Layer>
+				<Texture file="Interface\WorldMap\WorldMap-TitlebarSwitch-Normal">
+					<Size><AbsDimension x="16" y="16"/></Size>
+					<Color a=".1"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset>
+					<AbsDimension x="-5" y="-5"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+	</Frame>
+	<Frame name="MoveFrames_FPS" parent="WorldFrame" inherits="UIPanelAnchorFrameTemplate" frameLevel="-1" enableMouse="true">
+		<Size><AbsDimension x="10" y="10"/></Size>
+		<Anchors>
+			<Anchor point="BOTTOM">
+				<Offset>
+					<AbsDimension x="-256" y="-94"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Scripts>
+			<OnLoad>
+				FramerateText:SetScale(0.8)
+				FramerateText:ClearAllAnchors()
+				FramerateText:SetAnchor("LEFT", "LEFT", this, 0, 0)
+			</OnLoad>
+			<OnEnter>
+				if FramerateText:IsVisible() then
+					GameTooltip:SetOwner(this, "ANCHOR_LEFT", 4, 0)
+					GameTooltip:SetText(UIPANELANCHORFRAME_TOOLTIP, 0, 0.75, 0.95)
+				end
+			</OnEnter>
+		</Scripts>
+	</Frame>
+</Ui>
